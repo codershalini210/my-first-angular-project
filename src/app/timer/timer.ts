@@ -9,9 +9,9 @@ import {CommonModule} from "@angular/common"
 export class Timer {
 minutes:number
 seconds:number
-  timeLeftColor: string;
+timeLeftColor: string;
 buttonLabel: string;
-  isPaused: boolean;
+isPaused: boolean;
 constructor(private cd: ChangeDetectorRef )
 {
    this.buttonLabel = 'Start';
