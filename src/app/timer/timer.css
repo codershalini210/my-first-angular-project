@@ -1,0 +1,9 @@
+.haveTime {
+  color: green;
+}
+.lessTime {
+  color: orange;
+}
+.noTime {
+  color: red;
+}

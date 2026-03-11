@@ -1,3 +1,12 @@
-<p>timer 
-    {{minutes}}:{{seconds | number: "2.0"}}
-</p>
+<div [ngSwitch]="this.timeLeftColor">
+  <p *ngSwitchCase="'haveTime'" class='haveTime'>Note the time</p>
+  <p *ngSwitchCase="'lessTime'" class='lessTime'>Less Time! Less than 2 Minutes</p>
+  <p *ngSwitchCase="'noTime'" class='noTime'>NO Time! Less than 1 Minute</p>
+  <div class=timer>
+    <h3>{{ minutes }}: {{ seconds | number: '2.0' }}</h3>
+  </div>
+  <p>
+    <button (click)="togglePause()">{{ buttonLabel }}</button>
+  </p>
+</div>
+
