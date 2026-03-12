@@ -2,6 +2,7 @@
   <p *ngSwitchCase="'haveTime'" class='haveTime'>Note the time</p>
   <p *ngSwitchCase="'lessTime'" class='lessTime'>Less Time! Less than 2 Minutes</p>
   <p *ngSwitchCase="'noTime'" class='noTime'>NO Time! Less than 1 Minute</p>
+  <app-countdown-to-end [seconds]="25" (completed)="onCountdownCompleted()"></app-countdown-to-end>
   <div class=timer>
     <h3>{{ timer.minutes }}: {{ timer.seconds | number: '2.0' }}</h3>
   </div>

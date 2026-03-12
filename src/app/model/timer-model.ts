@@ -9,7 +9,7 @@ constructor(private cd : ChangeDetectorRef)
 {
    this.buttonLabel = 'Start';
   this.isPaused = false;
-   this.minutes = 3;
+   this.minutes = 1;
     this.seconds = 59;
   this.timeLeftColor = 'haveTime';
   setInterval(()=>this.tick(),500)  
@@ -19,7 +19,7 @@ tick()
 {
     setInterval(() => this.timeLeft(), 500);
      if (!this.isPaused) {
-      console.log("here")
+    //   console.log("here")
       this.buttonLabel = 'Pause';
   if (--this.seconds < 0) {
       this.seconds = 59;
@@ -44,13 +44,10 @@ this.cd.detectChanges();
   }
 
 
-   togglePause() {
-    this.isPaused = !this.isPaused;
-    this.buttonLabel = this.isPaused ? 'Resume' : 'Pause';
-  }
+  
 
    reset(): void {
-    this.minutes = 3;
+    this.minutes = 1;
     this.seconds = 59;
   }
 }
